@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_api_new/models.dart';
+import 'package:flutter_api_new/models/models.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {

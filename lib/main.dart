@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_new/home_page.dart';
+import 'package:flutter_api_new/home_page1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Get Data'),
         ),
-        body: const HomePage(),
+        body: const HomePage1(),
       ),
     );
   }
