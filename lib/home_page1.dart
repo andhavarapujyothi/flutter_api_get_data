@@ -25,40 +25,45 @@ class _HomePage1State extends State<HomePage1> {
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 itemCount: userdetails.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 15),
-                    margin: const EdgeInsets.only(bottom: 10),
-                    height: 300,
-                    decoration: BoxDecoration(
+                  return Card(
+                    elevation: 3.0,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 15),
+                      // margin: const EdgeInsets.only(bottom: 10),
+                      height: 300,
+                      decoration: const BoxDecoration(
                         color: Colors.greenAccent,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        getText(index, 'ID:', userdetails[index].id.toString()),
-                        getText(
-                            index, 'Name:', userdetails[index].name.toString()),
-                        getText(index, 'UserName:',
-                            userdetails[index].username.toString()),
-                        getText(index, 'Email:',
-                            userdetails[index].email.toString()),
-                        getText(index, 'Phone:',
-                            userdetails[index].phone.toString()),
-                        getText(index, 'website:',
-                            userdetails[index].website.toString()),
-                        getText(
-                          index,
-                          'Address:',
-                          '${userdetails[index].address.suite.toString()},${userdetails[index].address.street.toString()},${userdetails[index].address.city.toString()},${userdetails[index].address.zipcode.toString()},${userdetails[index].address.geo.toString()}:,${userdetails[index].address.geo.lat.toString()},${userdetails[index].address.geo.lng.toString()}',
-                        ),
-                        getText(
-                          index,
-                          'Company:',
-                          '${userdetails[index].company.name.toString()},${userdetails[index].company.catchPhrase.toString()},${userdetails[index].company.bs.toString()}',
-                        )
-                      ],
+                        //borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          getText(
+                              index, 'ID:', userdetails[index].id.toString()),
+                          getText(index, 'Name:',
+                              userdetails[index].name.toString()),
+                          getText(index, 'UserName:',
+                              userdetails[index].username.toString()),
+                          getText(index, 'Email:',
+                              userdetails[index].email.toString()),
+                          getText(index, 'Phone:',
+                              userdetails[index].phone.toString()),
+                          getText(index, 'website:',
+                              userdetails[index].website.toString()),
+                          getText(
+                            index,
+                            'Address:',
+                            '${userdetails[index].address.suite.toString()},${userdetails[index].address.street.toString()},${userdetails[index].address.city.toString()},${userdetails[index].address.zipcode.toString()},${userdetails[index].address.geo.toString()}:,${userdetails[index].address.geo.lat.toString()},${userdetails[index].address.geo.lng.toString()}',
+                          ),
+                          getText(
+                            index,
+                            'Company:',
+                            '${userdetails[index].company.name.toString()},${userdetails[index].company.catchPhrase.toString()},${userdetails[index].company.bs.toString()}',
+                          )
+                        ],
+                      ),
                     ),
                   );
                 });
